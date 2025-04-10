@@ -1,0 +1,46 @@
+.card {
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogImg {
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.intro {
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 1;
+    transition: height 0.4s ease;
+    padding: 10px;
+    height: 60px; /* Enough to show only the title initially */
+    overflow: hidden;
+}
+
+.card:hover .intro {
+    height: 200px; /* Expand to show full content */
+}
+
+.title {
+    font-size: 28px;
+    margin: 0 0 5px 0;
+}
+
+.details {
+    font-size: 16px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s;
+}
+
+.card:hover .details {
+    opacity: 1;
+}
